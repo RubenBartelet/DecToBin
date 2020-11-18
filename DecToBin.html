@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head><title>BecToBin</title></head>
+    <input id = 'BinNumberText' placeholder = 'BinNumber Max. 1023'>
+    <br><button onClick = 'Convert()'>Click Me</button>
+    <br><button onClick = 'BetterVersion()'>Better Version</button>
+    <p id='intText1'></p>
+    <p id='intText2'></p>
+    <p id='intText3'></p>
+    <p id='intText4'></p>
+    <p id='intText5'></p>
+    <p id='intText6'></p>
+    <p id='intText7'></p>
+    <p id='intText8'></p>
+    <p id='intText9'></p>
+    <p id='intText10'></p>
+<script>
+  var binNumber;
+  var startNumber = 2048;
+  var i;
+    
+  function Convert()
+    {
+        binNumber = document.getElementById('BinNumberText').value;	
+        for (i = 0; i < 12; i++) 
+        {   
+        startNumber = startNumber / 2;
+        if(binNumber >= startNumber)
+           {
+           WhatItrue();
+           binNumber -= startNumber;
+           }
+           else
+           {
+           WhatIfalse();
+           }
+        }
+        setTimeout(function(){startNumber = 2048;},10);
+    }
+  function WhatItrue(){if(i==1){document.getElementById("intText1").innerHTML = 1;
+        }else if(i==2){document.getElementById("intText2").innerHTML = 1;   
+        }else if(i==3){document.getElementById("intText3").innerHTML = 1;
+        }else if(i==4){document.getElementById("intText4").innerHTML = 1;
+        }else if(i==5){document.getElementById("intText5").innerHTML = 1;
+        }else if(i==6){document.getElementById("intText6").innerHTML = 1;
+        }else if(i==7){document.getElementById("intText7").innerHTML = 1;
+        }else if(i==8){document.getElementById("intText8").innerHTML = 1;
+        }else if(i==9){document.getElementById("intText9").innerHTML = 1;
+        }else if(i==10){document.getElementById("intText10").innerHTML = 1;}}
+  
+  function WhatIfalse(){if(i==1){document.getElementById("intText1").innerHTML = 0;
+        }else if(i==2){document.getElementById("intText2").innerHTML = 0;   
+        }else if(i==3){document.getElementById("intText3").innerHTML = 0;
+        }else if(i==4){document.getElementById("intText4").innerHTML = 0;
+        }else if(i==5){document.getElementById("intText5").innerHTML = 0;
+        }else if(i==6){document.getElementById("intText6").innerHTML = 0;
+        }else if(i==7){document.getElementById("intText7").innerHTML = 0;
+        }else if(i==8){document.getElementById("intText8").innerHTML = 0;
+        }else if(i==9){document.getElementById("intText9").innerHTML = 0;
+        }else if(i==10){document.getElementById("intText10").innerHTML = 0;}}
+  
+  function BetterVersion(){window.open('https://www.youtube.com/watch?v=dQw4w9WgXcQ');}   
+</script>
+</body>
+</html>
